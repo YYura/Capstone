@@ -1,5 +1,4 @@
 import { createWebHistory, createRouter } from 'vue-router'
-import Vue from 'vue'
 
 const routes = [
   {
@@ -13,7 +12,6 @@ const routes = [
     component: () => import('@/components/ItemBuy/BuyList')
   }
 ]
-Vue.use
 
 export const router = createRouter({
   history: createWebHistory(),
