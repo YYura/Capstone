@@ -10,7 +10,7 @@
         <div class="card">
           <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">{{memberName.data}}</h5>
             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
           </div>
         </div>
@@ -18,7 +18,7 @@
       <div class="col">
         <div class="card">
           <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
-          <div class="card-body">
+          <div class="card                                                                                                                                                                                                                                                       -body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
           </div>
@@ -94,18 +94,37 @@
 <script>
 import Sidebar from '@/components/ItemBuy/Sidebar'
 import { sidebarWidth } from '@/components/ItemBuy/state'
+import axios from 'axios'
+import { reactive } from 'vue'
 
 export default {
   name: 'ItemBuy',
   components: { Sidebar },
+  // data () {
+  //   return {
+  //     memberName: ''
+  //   }
+  // },
   setup () {
-    return { sidebarWidth }
-  },
-  data () {
-    return {
+    const memberName = reactive({
+      data: []
+    })
 
+    axios.get('http://localhost:8090/api/shop')
+      .then(response => {
+        console.log(memberName)
+        memberName.data = response.data
+      })
+      .catch(function (ex) {
+        console.log('button fail', ex)
+      })
+    return {
+      sidebarWidth, memberName
     }
+  },
+  methods: {
   }
+
 }
 
 </script>
