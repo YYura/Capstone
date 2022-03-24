@@ -1,15 +1,92 @@
 <template>
   <Sidebar />
-  <div :style="{ 'margin-left': sidebarWidth}">
+  <div :style="{ 'margin-left': sidebarWidth }">
     <router-view />
   </div>
   <div class="ItemBuy">
     <h2>Item Buy</h2>
-    <h2>Best</h2>
-    <div class="best-item-box">
-    </div>
-    <h2>New</h2>
-    <div class="new-item-box">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -36,25 +113,15 @@ export default {
 <style scoped>
 .ItemBuy{
   width: 100%;
-  height: 1200px;
+  height: 90%;
 }
-.best-item-box{
-  position: absolute;
-  box-sizing: content-box;
-  width: 800px;
-  height: 1000px;
-  padding: 0;
-  border: 1px solid black;
-  margin: 80px 350px;
+.row-cols-1{
+  width: 80%;
+  height: 100%;
+  margin: 120px 300px;
 }
-.new-item-box{
-  position: absolute;
-  box-sizing: content-box;
-  width: 800px;
-  height: 1000px;
-  padding: 0;
-  border: 1px solid black;
-  margin: 80px 1300px;
+.card{
+  width: 50%;
+  height: 50%;
 }
-
 </style>

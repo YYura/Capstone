@@ -13,6 +13,17 @@
     <SidebarLink icon="" to="/">Home</SidebarLink>
     <SidebarLink icon="" to="/">Home</SidebarLink>
     <SidebarLink icon="" to="/">Home</SidebarLink>
+    <SidebarLink icon="" to="/">Home</SidebarLink>
+    <SidebarLink icon="" to="/">Home</SidebarLink>
+    <SidebarLink icon="" to="/">Home</SidebarLink>
+    <SidebarLink icon="" to="/">Home</SidebarLink>
+    <SidebarLink icon="" to="/">Home</SidebarLink>
+    <SidebarLink icon="" to="/">Home</SidebarLink>
+    <SidebarLink icon="" to="/">Home</SidebarLink>
+    <SidebarLink icon="" to="/">Home</SidebarLink>
+    <SidebarLink icon="" to="/">Home</SidebarLink>
+    <SidebarLink icon="" to="/">Home</SidebarLink>
+    <SidebarLink icon="" to="/">Home</SidebarLink>
 
     <span
       class="collapse-icon"
@@ -21,6 +32,7 @@
           <i class='fas fa-angle-double-left'>  〈〈  </i>
     </span>
   </div>
+
 </template>
 
 <script>
@@ -38,6 +50,7 @@ export default {
 </script>
 
 <style>
+
 :root {
   --sidebar-bg-color: #2f855a;
   --sidebar-item-hover: #38a169;
