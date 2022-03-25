@@ -7,86 +7,86 @@
     <h2>Item Buy</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col">
-        <div class="card">
+        <div class="card" v-for="(item, index) in items" :key="index">
           <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">{{memberName.data}}</h5>
+            <h5 class="card-title">{{item}}</h5>
             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card">
-          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
-          <div class="card                                                                                                                                                                                                                                                       -body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
+<!--      <div class="col">-->
+<!--        <div class="card">-->
+<!--          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">-->
+<!--          <div class="card                                                                                                                                                                                                                                                       -body">-->
+<!--            <h5 class="card-title">Card title</h5>-->
+<!--            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="col">-->
+<!--        <div class="card">-->
+<!--          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">-->
+<!--          <div class="card-body">-->
+<!--            <h5 class="card-title">Card title</h5>-->
+<!--            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="col">-->
+<!--        <div class="card">-->
+<!--          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">-->
+<!--          <div class="card-body">-->
+<!--            <h5 class="card-title">Card title</h5>-->
+<!--            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="col">-->
+<!--        <div class="card">-->
+<!--          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">-->
+<!--          <div class="card-body">-->
+<!--            <h5 class="card-title">Card title</h5>-->
+<!--            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="col">-->
+<!--        <div class="card">-->
+<!--          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">-->
+<!--          <div class="card-body">-->
+<!--            <h5 class="card-title">Card title</h5>-->
+<!--            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="col">-->
+<!--        <div class="card">-->
+<!--          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">-->
+<!--          <div class="card-body">-->
+<!--            <h5 class="card-title">Card title</h5>-->
+<!--            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="col">-->
+<!--        <div class="card">-->
+<!--          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">-->
+<!--          <div class="card-body">-->
+<!--            <h5 class="card-title">Card title</h5>-->
+<!--            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="col">-->
+<!--        <div class="card">-->
+<!--          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">-->
+<!--          <div class="card-body">-->
+<!--            <h5 class="card-title">Card title</h5>-->
+<!--            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
     </div>
   </div>
 </template>
@@ -106,20 +106,20 @@ export default {
   //   }
   // },
   setup () {
-    const memberName = reactive({
+    const items = reactive({
       data: []
     })
 
     axios.get('http://localhost:8090/api/shop')
       .then(response => {
-        console.log(memberName)
-        memberName.data = response.data
+        console.log(items)
+        items.data = response.data
       })
       .catch(function (ex) {
         console.log('button fail', ex)
       })
     return {
-      sidebarWidth, memberName
+      sidebarWidth, items
     }
   },
   methods: {

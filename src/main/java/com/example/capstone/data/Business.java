@@ -1,6 +1,7 @@
 package com.example.capstone.data;
 
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
@@ -24,5 +25,6 @@ public class Business {
     private String businessPhone;
     private String businessHomepage;
     private Timestamp businessEnrollment;
+
 
 }
