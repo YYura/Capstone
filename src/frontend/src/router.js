@@ -12,7 +12,7 @@ const routes = [
     component: () => import('@/components/ItemBuy/BuyList')
   },
   {
-    path: '/itemBuy/now',
+    path: '/itemBuy/buyNow',
     name: 'BuyNow',
     component: () => import('@/components/ItemBuy/BuyNow')
   }

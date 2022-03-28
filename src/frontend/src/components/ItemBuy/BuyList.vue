@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-    <button><a class="nav-link" href="../ItemBuy/BuyNow">Buy Now</a></button>
+    <button><a class="nav-link" href="../itemBuy/buyNow">Buy Now</a></button>
   </div>
 </template>
 
