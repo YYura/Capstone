@@ -15,79 +15,8 @@
           </div>
         </div>
       </div>
-<!--      <div class="col">-->
-<!--        <div class="card">-->
-<!--          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">-->
-<!--          <div class="card                                                                                                                                                                                                                                                       -body">-->
-<!--            <h5 class="card-title">Card title</h5>-->
-<!--            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="col">-->
-<!--        <div class="card">-->
-<!--          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">-->
-<!--          <div class="card-body">-->
-<!--            <h5 class="card-title">Card title</h5>-->
-<!--            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="col">-->
-<!--        <div class="card">-->
-<!--          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">-->
-<!--          <div class="card-body">-->
-<!--            <h5 class="card-title">Card title</h5>-->
-<!--            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="col">-->
-<!--        <div class="card">-->
-<!--          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">-->
-<!--          <div class="card-body">-->
-<!--            <h5 class="card-title">Card title</h5>-->
-<!--            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="col">-->
-<!--        <div class="card">-->
-<!--          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">-->
-<!--          <div class="card-body">-->
-<!--            <h5 class="card-title">Card title</h5>-->
-<!--            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="col">-->
-<!--        <div class="card">-->
-<!--          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">-->
-<!--          <div class="card-body">-->
-<!--            <h5 class="card-title">Card title</h5>-->
-<!--            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="col">-->
-<!--        <div class="card">-->
-<!--          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">-->
-<!--          <div class="card-body">-->
-<!--            <h5 class="card-title">Card title</h5>-->
-<!--            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="col">-->
-<!--        <div class="card">-->
-<!--          <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">-->
-<!--          <div class="card-body">-->
-<!--            <h5 class="card-title">Card title</h5>-->
-<!--            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
     </div>
+    <button><a class="nav-link" href="../ItemBuy/BuyNow">Buy Now</a></button>
   </div>
 </template>
 
@@ -108,16 +37,14 @@ export default {
   setup () {
     const items = reactive({
       data: {
-        datas: [
 
-        ]
       }
     })
 
     axios.get('http://localhost:8090/api/shop')
       .then(response => {
         console.log(items)
-        items.data = response.data.datas
+        items.data = response.data.data
       })
       .catch(function (ex) {
         console.log('button fail', ex)
@@ -127,6 +54,7 @@ export default {
     }
   },
   methods: {
+
   }
 
 }
