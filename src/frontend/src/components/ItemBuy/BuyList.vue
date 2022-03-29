@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-    <button><a class="nav-link" href="../itemBuy/buyNow">Buy Now</a></button>
+    <button><router-link class="nav-link" to="/itemBuy/buyNow">Buy Now</router-link></button>
   </div>
 </template>
 
@@ -44,7 +44,7 @@ export default {
     axios.get('http://localhost:8090/api/shop')
       .then(response => {
         console.log(items)
-        items.data = response.data.data
+        items.data = response.data
       })
       .catch(function (ex) {
         console.log('button fail', ex)

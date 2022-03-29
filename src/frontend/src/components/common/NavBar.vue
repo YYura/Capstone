@@ -4,22 +4,22 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="/">캠핑플랜</a>
+            <router-link class="nav-link" to="/">캠핑플랜</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/">인포터</a>
+            <router-link class="nav-link" to="/">인포터</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/itemBuy">Item Buy</a>
+            <router-link class="nav-link" to="/itemBuy">Item Buy</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/">Item Share</a>
+            <router-link class="nav-link" to="/">Item Share</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/">캠프파이어</a>
+            <router-link class="nav-link" to="/">캠프파이어</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/">고객센터</a>
+            <router-link class="nav-link" to="/">고객센터</router-link>
           </li>
 
           <!--          <li class="nav-item dropdown">-->
