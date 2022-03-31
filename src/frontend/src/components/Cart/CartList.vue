@@ -1,12 +1,12 @@
 <template>
-  <section class="test">
-    <input >
-  </section>
+  <div>
+
+  </div>
 </template>
 
 <script>
 export default {
-  name: "Pay"
+  name: 'CartList'
 }
 </script>
 

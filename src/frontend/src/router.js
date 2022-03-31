@@ -15,6 +15,11 @@ const routes = [
     path: '/itemBuy/buyNow',
     name: 'BuyNow',
     component: () => import('@/components/ItemBuy/BuyNow')
+  },
+  {
+    path: '/itemBuy/payComplete',
+    name: 'PayComplete',
+    component: () => import('@/components/ItemBuy/PayComplete')
   }
 ]
 
