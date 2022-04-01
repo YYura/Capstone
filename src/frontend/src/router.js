@@ -20,7 +20,13 @@ const routes = [
     path: '/itemBuy/payComplete',
     name: 'PayComplete',
     component: () => import('@/components/ItemBuy/PayComplete')
+  },
+  {
+    path: '/itemShare/shareNow',
+    name: 'ShareNow',
+    component: () => import('@/components/ItemShare/ShareNow')
   }
+
 ]
 
 export const router = createRouter({
