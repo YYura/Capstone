@@ -11,38 +11,33 @@
 </template>
 
 <script>
-import Sidebar from '@/components/ItemBuy/Sidebar'
-import { sidebarWidth } from '@/components/ItemBuy/state'
-import axios from 'axios'
-import { reactive } from 'vue'
+import Sidebar from '@/components/Sidebar/Sidebar'
+import { sidebarWidth } from '@/components/Sidebar/state'
+
+// import { reactive } from 'vue'
 
 export default {
   name: 'ItemBuy',
   components: { Sidebar },
-  // data () {
-  //   return {
-  //     memberName: ''
-  //   }
-  // },
-  setup () {
-    const items = reactive({
-      data: {
+  // setup () {
+  //   const items = reactive({
+  //     data: {
+  //
+  //     }
+  //   })
 
-      }
-    })
-
-    axios.get('http://localhost:8090/api/shop')
-      .then(response => {
-        console.log(items)
-        items.data = response.data
-      })
-      .catch(function (ex) {
-        console.log('button fail', ex)
-      })
-    return {
-      sidebarWidth, items
-    }
+  // axios.get('http://localhost:8090/api/shop')
+  //   .then(response => {
+  //     console.log(items)
+  //     items.data = response.data
+  //   })
+  //   .catch(function (ex) {
+  //     console.log('button fail', ex)
+  //   })
+  return: {
+    sidebarWidth
   },
+  // },
   methods: {
 
   }

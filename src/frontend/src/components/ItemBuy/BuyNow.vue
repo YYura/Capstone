@@ -150,12 +150,12 @@ export default {
           msg += '결제 금액 : ' + rsp.paid_amount
           msg += '카드 승인번호 : ' + rsp.apply_num
           alert(msg)
-          window.location.href = 'http://localhost:8080/itemBuy/payComplete'
+          window.location.href = 'http://localhost:8080/itemBuy/buyComplete'
         } else {
           let msg = '결제에 실패하였습니다.'
           msg += '에러 내용 : ' + rsp.error_msg
           alert(msg)
-          window.location.href = 'http://localhost:8080/itemBuy/payComplete'
+          window.location.href = 'http://localhost:8080/itemBuy/buyComplete'
         }
       })
     }

@@ -17,14 +17,34 @@ const routes = [
     component: () => import('@/components/ItemBuy/BuyNow')
   },
   {
-    path: '/itemBuy/payComplete',
-    name: 'PayComplete',
-    component: () => import('@/components/ItemBuy/PayComplete')
+    path: '/itemBuy/buyComplete',
+    name: 'BuyComplete',
+    component: () => import('@/components/ItemBuy/BuyComplete')
+  },
+  {
+    path: '/itemShare',
+    name: 'ShareList',
+    component: () => import('@/components/ItemShare/ShareList')
   },
   {
     path: '/itemShare/shareNow',
     name: 'ShareNow',
     component: () => import('@/components/ItemShare/ShareNow')
+  },
+  {
+    path: '/itemBuy/shareComplete',
+    name: 'shareComplete',
+    component: () => import('@/components/ItemShare/ShareComplete')
+  },
+  {
+    path: '/infoter',
+    name: 'InfoterList',
+    component: () => import('@/components/Infoter/InfoterList')
+  },
+  {
+    path: '/infoter/infoterNow',
+    name: 'InfoterNow',
+    component: () => import('@/components/Infoter/InfoterNow')
   }
 
 ]

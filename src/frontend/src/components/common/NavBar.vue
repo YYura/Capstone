@@ -7,13 +7,13 @@
             <router-link class="nav-link" to="/">캠핑플랜</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/">인포터</router-link>
+            <router-link class="nav-link" to="/infoter">인포터</router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link" to="/itemBuy">Item Buy</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/">Item Share</router-link>
+            <router-link class="nav-link" to="/itemShare">Item Share</router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link" to="/">캠프파이어</router-link>

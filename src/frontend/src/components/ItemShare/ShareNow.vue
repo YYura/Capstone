@@ -61,15 +61,15 @@
         <td><input size="40" type="text"></td>
       </tr>
       <tr>
-        <td class="share-now-td">대여 시작일</td>
-        <td><b-calendar v-model="value" @context="onContext" locale="en-US"></b-calendar>{{value}}</td>
+        <td class="share-now-td">대여일</td>
+        <td><Datepicker v-model="shareDate" :enable-time-picker="false" range placeholder="Select share date range"></Datepicker></td>
       </tr>
     </table>
 
     <h3>결제 정보</h3>
     <table>
       <tr>
-        <td class="share-now-td">총 상품 금액</td>
+        <td class="share-now-td">총 대여상품 금액</td>
         <td>200000</td>
       </tr>
       <tr>
@@ -82,7 +82,7 @@
       </tr>
     </table>
 
-    <h5>구매조건 확인 및 결제대행 서비스 약관 동의<button>보기</button></h5>
+    <h5>대여조건 확인 및 결제대행 서비스 약관 동의<button>보기</button></h5>
     <h5>개인정보 제3자 제공 동의<button>보기</button></h5>
 
     <h5 class="share-now-info-check">위 주문 내용을 확인하였으며, 회원 본인은 개인정보 이용 및 제공(해외직구의 경우 국외제공) 및 결제에 동의합니다.</h5>
@@ -92,9 +92,12 @@
 </template>
 
 <script>
+import Datepicker from '@vuepic/vue-datepicker'
+import '@vuepic/vue-datepicker/dist/main.css'
 
 export default {
   name: 'ShareNow',
+  components: { Datepicker },
   data () {
     return {
       zip: '',
@@ -102,19 +105,7 @@ export default {
       addr2: '',
       price: 1000,
       value: '',
-      Context:
-          {
-            selectedYMD: '2022-04-15',
-            selectedDate: '2022-04-14T15:00:00.000Z',
-            selectedFormatted: 'Friday, April 15, 2022',
-            activeYMD: '2022-04-15',
-            activeDate: '2022-04-14T15:00:00.000Z',
-            activeFormatted: 'Friday, April 15, 2022',
-            disabled: false,
-            locale: 'en-US',
-            calendarLocale: 'en-US',
-            rtl: false
-          }
+      shareDate: null
     }
   },
   mounted () {
@@ -169,17 +160,14 @@ export default {
           msg += '결제 금액 : ' + rsp.paid_amount
           msg += '카드 승인번호 : ' + rsp.apply_num
           alert(msg)
-          window.location.href = 'http://localhost:8080/itemBuy/payComplete'
+          window.location.href = 'http://localhost:8080/itemBuy/shareComplete'
         } else {
           let msg = '결제에 실패하였습니다.'
           msg += '에러 내용 : ' + rsp.error_msg
           alert(msg)
-          window.location.href = 'http://localhost:8080/itemBuy/payComplete'
+          window.location.href = 'http://localhost:8080/itemBuy/shareComplete'
         }
       })
-    },
-    onContext (ctx) {
-      this.Context = ctx
     }
   }
 }
