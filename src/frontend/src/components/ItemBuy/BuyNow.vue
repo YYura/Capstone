@@ -83,6 +83,7 @@
 
     <h5 class="buy-now-info-check">위 주문 내용을 확인하였으며, 회원 본인은 개인정보 이용 및 제공(해외직구의 경우 국외제공) 및 결제에 동의합니다.</h5>
     <button class="payNow" @click="paymentBtn()">결제하기</button>
+    <button class="cancel-buy-now" @click="cancelBtn()">취소</button>
 
   </div>
 </template>
@@ -158,6 +159,9 @@ export default {
           window.location.href = 'http://localhost:8080/itemBuy/buyComplete'
         }
       })
+    },
+    cancelBtn () {
+      window.location.href = 'http://localhost:8080/itemBuy'
     }
   }
 }
@@ -195,10 +199,13 @@ export default {
   margin: 0% 2%;
 }
 .payNow{
-  margin: 0% 30%;
+  margin-left: 27%;
 }
 .buy-now-info-check{
   margin: 3% 30%;
   padding: 1.5%;
+}
+.cancel-buy-now{
+  margin-left: 5%;
 }
 </style>

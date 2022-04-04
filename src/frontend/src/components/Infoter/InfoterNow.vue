@@ -6,7 +6,7 @@
     <table>
       <tr>
         <td class="infoter-now-td">이름</td>
-        <td>땡땡땡</td>
+        <td>갑돌이</td>
       </tr>
       <tr>
         <td class="infoter-now-td">이메일</td>
@@ -33,7 +33,7 @@
         <td><input size="40" type="text"></td>
       </tr>
       <tr>
-        <td class="share-now-td">예약일</td>
+        <td class="infoter-now-td">예약일</td>
         <td><Datepicker v-model="reservationDate" :enable-time-picker="false" :min-date="today" :max-date="end" range placeholder="Select date range"></Datepicker></td>
       </tr>
     </table>
@@ -41,11 +41,11 @@
     <h3>결제 정보</h3>
     <table>
       <tr>
-        <td class="infoter-now-td">총 상품 금액</td>
+        <td class="infoter-now-td">객실 금액</td>
         <td>200000</td>
       </tr>
       <tr>
-        <td class="infoter-now-td">배송비</td>
+        <td class="infoter-now-td">옵션 금액</td>
         <td>10000</td>
       </tr>
       <tr>
@@ -54,11 +54,13 @@
       </tr>
     </table>
 
-    <h5>구매조건 확인 및 결제대행 서비스 약관 동의<button>보기</button></h5>
+    <h5>취소 및 환불수수료 동의<button>보기</button></h5>
     <h5>개인정보 제3자 제공 동의<button>보기</button></h5>
+    <h5>개인정보 수집 및 이용 동의<button>보기</button></h5>
 
     <h5 class="infoter-now-info-check">위 주문 내용을 확인하였으며, 회원 본인은 개인정보 이용 및 제공(해외직구의 경우 국외제공) 및 결제에 동의합니다.</h5>
-    <button class="payNow" @click="paymentBtn()">결제하기</button>
+    <button class="pay-infoter-now" @click="paymentBtn()">결제하기</button>
+    <button class="cancel-infoter-now" @click="cancelBtn()">취소</button>
 
   </div>
 </template>
@@ -119,6 +121,9 @@ export default {
           window.location.href = 'http://localhost:8080/itemBuy/buyComplete'
         }
       })
+    },
+    cancelBtn () {
+      window.location.href = 'http://localhost:8080/infoter'
     }
   }
 }
@@ -155,11 +160,14 @@ export default {
 .infoterNow h5 button{
   margin: 0% 2%;
 }
-.infoterNow{
-  margin: 0% 30%;
+.pay-infoter-now{
+  margin-left: 27%;
 }
 .infoter-now-info-check{
   margin: 3% 30%;
   padding: 1.5%;
+}
+.cancel-infoter-now{
+  margin-left: 5%;
 }
 </style>

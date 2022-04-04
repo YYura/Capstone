@@ -45,6 +45,16 @@ const routes = [
     path: '/infoter/infoterNow',
     name: 'InfoterNow',
     component: () => import('@/components/Infoter/InfoterNow')
+  },
+  {
+    path: '/infoter/infoterComplete',
+    name: 'InfoterComplete',
+    component: () => import('@/components/Infoter/InfoterNow')
+  },
+  {
+    path: '/cart',
+    name: 'CartList',
+    component: () => import('@/components/Cart/CartList')
   }
 
 ]
