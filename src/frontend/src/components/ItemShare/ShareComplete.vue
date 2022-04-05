@@ -131,7 +131,7 @@ export default {
   padding: 2%;
 }
 .pay-share-complete .pay-share-info-back-btn{
-  margin: 4% 48%;
-  width: 5%;
+  margin: 4% 46%;
+  width: 10%;
 }
 </style>

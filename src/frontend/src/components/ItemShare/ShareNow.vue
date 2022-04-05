@@ -62,7 +62,7 @@
       </tr>
       <tr>
         <td class="share-now-td">대여일</td>
-        <td><Datepicker v-model="shareDate" :enable-time-picker="false" range placeholder="Select share date range"></Datepicker></td>
+        <td><Datepicker v-model="shareDate" :enable-time-picker="false" :min-date="today" range placeholder="Select share date range"></Datepicker></td>
       </tr>
     </table>
 
@@ -106,7 +106,8 @@ export default {
       addr2: '',
       price: 1000,
       value: '',
-      shareDate: null
+      shareDate: null,
+      today: new Date()
     }
   },
   mounted () {
@@ -142,33 +143,35 @@ export default {
       }).open()
     },
     paymentBtn () {
-      const IMP = window.IMP
-      IMP.init('imp35975601')
+      if (confirm('결제 하시겠습니까?')) {
+        const IMP = window.IMP
+        IMP.init('imp35975601')
 
-      IMP.request_pay({
-        pg: 'html5_inicis',
-        pay_method: 'card',
-        merchant_uid: 'merchant_' + new Date().getTime(),
-        name: '상품명',
-        amount: this.price,
-        buyer_tel: '01012345678',
-        confirm_url: ''
-      }, (rsp) => {
-        if (rsp.success) {
-          let msg = '결제가 완료되었습니다.'
-          msg += '고유ID : ' + rsp.imp_uid
-          msg += '상점 거래 ID : ' + rsp.merchant_uid
-          msg += '결제 금액 : ' + rsp.paid_amount
-          msg += '카드 승인번호 : ' + rsp.apply_num
-          alert(msg)
-          window.location.href = 'http://localhost:8080/itemBuy/shareComplete'
-        } else {
-          let msg = '결제에 실패하였습니다.'
-          msg += '에러 내용 : ' + rsp.error_msg
-          alert(msg)
-          window.location.href = 'http://localhost:8080/itemBuy/shareComplete'
-        }
-      })
+        IMP.request_pay({
+          pg: 'html5_inicis',
+          pay_method: 'card',
+          merchant_uid: 'merchant_' + new Date().getTime(),
+          name: '상품명',
+          amount: this.price,
+          buyer_tel: '01012345678',
+          confirm_url: ''
+        }, (rsp) => {
+          if (rsp.success) {
+            let msg = '결제가 완료되었습니다.'
+            msg += '고유ID : ' + rsp.imp_uid
+            msg += '상점 거래 ID : ' + rsp.merchant_uid
+            msg += '결제 금액 : ' + rsp.paid_amount
+            msg += '카드 승인번호 : ' + rsp.apply_num
+            alert(msg)
+            window.location.href = 'http://localhost:8080/itemBuy/buyComplete'
+          } else {
+            let msg = '결제에 실패하였습니다.'
+            msg += '에러 내용 : ' + rsp.error_msg
+            alert(msg)
+            window.location.href = 'http://localhost:8080/itemBuy/buyComplete'
+          }
+        })
+      }
     },
     cancelBtn () {
       window.location.href = 'http://localhost:8080/itemShare'

@@ -127,8 +127,8 @@ export default {
   padding: 2%;
 }
 .pay-complete .pay-info-back-btn{
-  margin: 4% 48%;
-  width: 5%;
+  margin: 4% 46%;
+  width: 10%;
 }
 
 </style>

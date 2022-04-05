@@ -55,8 +55,22 @@ const routes = [
     path: '/cart',
     name: 'CartList',
     component: () => import('@/components/Cart/CartList')
+  },
+  {
+    path: '/cart/buy',
+    name: 'BuyCart',
+    component: () => import('@/components/Cart/BuyCart')
+  },
+  {
+    path: '/cart/share',
+    name: 'ShareCart',
+    component: () => import('@/components/Cart/ShareCart')
+  },
+  {
+    path: '/cart/reservation',
+    name: 'ReservationCart',
+    component: () => import('@/components/Cart/ReservationCart')
   }
-
 ]
 
 export const router = createRouter({
