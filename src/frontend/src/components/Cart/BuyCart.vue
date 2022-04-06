@@ -4,14 +4,14 @@
 
     <table class="buy-cart-item-info">
       <tr>
-        <td><input type="checkbox" v-model="checkAll">전체선택</td>
+        <td class="buy-cart-checkbox"><input type="checkbox">전체선택</td>
         <td>상품/옵션 정보</td>
         <td>수량</td>
         <td>상품 금액</td>
         <td>배송비</td>
       </tr>
       <tr>
-        <td><input type="checkbox" v-model="check.check1"></td>
+        <td class="buy-cart-checkbox"><input type="checkbox"></td>
         <td>
           <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
@@ -32,7 +32,7 @@
         <td>{{price}}</td>
       </tr>
       <tr>
-        <td><input type="checkbox" v-model="check.check2"></td>
+        <td class="buy-cart-checkbox"><input type="checkbox"></td>
         <td>
           <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
@@ -63,30 +63,33 @@ export default {
   data () {
     return {
       price: 1000,
-      n: 5,
+      n: 5
+    }
+  },
+  setup () {
+    return {
       check: {
         check1: false,
         check2: false
-
-      },
-      computed: {
-        checkAll: {
-          // get: () => {
-          //   return this.check.check1 + ', ' + this.check.check2
-          // },
-          set: (e) => {
-            if (e === true) {
-              this.check.check1 = true
-              this.check.check2 = true
-            } else {
-              this.check.check1 = false
-              this.check.check2 = false
-            }
-          }
-        }
       }
     }
   }
+  // computed: {
+  //   checkAll: {
+  //     get: () => {
+  //       return this.check.check1
+  //     },
+  //     set: (e) => {
+  //       if (e === true) {
+  //         this.check.check1 = true
+  //         this.check.check2 = true
+  //       } else {
+  //         this.check.check1 = false
+  //         this.check.check2 = false
+  //       }
+  //     }
+  //   }
+  // }
 }
 </script>
 
@@ -101,6 +104,13 @@ export default {
   width: 80%;
   border: 1px solid #444444;
   border-collapse: collapse;
+}
+.buy-cart td {
+  border: 1px solid #444444;
+  padding: 2%;
+}
+.buy-cart-checkbox{
+  width: 12%;
 }
 
 </style>
