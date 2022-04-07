@@ -1,7 +1,7 @@
 <template>
   <div class="header-info">
     <header>
-      <h1 class="header-name"><a href="/" class="header-name-link">Camping Planner</a></h1>
+      <h1 class="header-name"><a href="/" class="header-name-link"><img :src="require('@/assets/campingLogo.jpg')" alt="...">Camping Planner</a></h1>
       <a class="header-signup-link" href="/signup">회원가입</a>
       <a class="header-login-link" href="/login">로그인</a>
     </header>
@@ -21,6 +21,10 @@ header{
   height:100%;
   border-bottom:1px solid #35495e;
   text-align: center;
+}
+header img{
+  width: 5%;
+  height: 5%;
 }
 
 .header-name{
