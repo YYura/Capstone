@@ -26,7 +26,8 @@ export default {
 <style scoped>
 .ItemShare{
   width: 100%;
-  height: 90%;
+  height: 100%;
+  margin-top: 3%;
 }
 .ItemShare button{
   margin: 5%;

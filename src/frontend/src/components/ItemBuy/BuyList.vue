@@ -19,21 +19,6 @@ import { sidebarWidth } from '@/components/Sidebar/state'
 export default {
   name: 'ItemBuy',
   components: { Sidebar },
-  // setup () {
-  //   const items = reactive({
-  //     data: {
-  //
-  //     }
-  //   })
-
-  // axios.get('http://localhost:8090/api/shop')
-  //   .then(response => {
-  //     console.log(items)
-  //     items.data = response.data
-  //   })
-  //   .catch(function (ex) {
-  //     console.log('button fail', ex)
-  //   })
   return: {
     sidebarWidth
   },
@@ -49,7 +34,8 @@ export default {
 <style scoped>
 .ItemBuy{
   width: 100%;
-  height: 90%;
+  height: 100%;
+  margin-top: 3%;
 }
 .ItemBuy button{
   margin: 5%;

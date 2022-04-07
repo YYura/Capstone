@@ -15,7 +15,9 @@ export default {
 <style scoped>
 .infoter{
   width: 100%;
-  height: 90%;
+  height: 100%;
+  margin-top: 3%;
+  margin-left: 5%;
 }
 .infoter button{
   margin: 5%;

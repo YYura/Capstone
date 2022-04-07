@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="header-info">
     <header>
-      <h1><a href="/" class="logo"><img alt="Vue logo" src="../../assets/logo.png" style="width: 80px">Camping Planner</a></h1>
+      <h1 class="header-name"><a href="/" class="header-name-link">Camping Planner</a></h1>
+      <a class="header-signup-link" href="/signup">회원가입</a>
+      <a class="header-login-link" href="/login">로그인</a>
     </header>
   </div>
 </template>
@@ -13,8 +15,44 @@ export default {
 </script>
 
 <style scoped>
-header{width:100%; text-align:center; display: flex; position:relative; height:120px; border-bottom:1px solid #35495e}
-header h1{position:absolute; top:0; left:100px;}
+header{
+  width:100%;
+  position:relative;
+  height:100%;
+  border-bottom:1px solid #35495e;
+  text-align: center;
+}
 
-a{text-decoration:none; color:#333;}
+.header-name{
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.header-name-link{
+  text-decoration:none;
+  color: black;
+  margin-top: 3%;
+}
+.header-name-link:hover{
+  color: cadetblue;
+}
+
+.header-login-link{
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  top: -30%;
+  left: 87%;
+}
+.header-login-link:hover{
+  color: cadetblue;
+}
+.header-signup-link{
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  top: -30%;
+  left: 80%;
+}
+
 </style>
