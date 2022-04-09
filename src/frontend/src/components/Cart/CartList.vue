@@ -18,8 +18,8 @@
         <h5>장바구니</h5>
       </div>
     </div>
+    <button class="cart-back"><router-link class="nav-link" to="/">Back</router-link></button>
   </div>
-  <button class="cart-back"><router-link class="nav-link" to="/">Back</router-link></button>
 </template>
 
 <script>
@@ -43,27 +43,28 @@ export default {
 
 <style scoped>
 h2{
-  margin: 2%;
+  margin: 4%;
 }
 .cart{
   width: 100%;
   height: 100%;
-  margin: 17%;
-  display:flex;
 }
 
 .cart-back{
-  margin-left: 45%;
+  margin-top: 10% ;
+  margin-left: 48%;
 }
 
 .cart .cart-list{
   display:flex;
+  justify-content: center;
+  align-items: center;
 }
 .cart .buy-cart-btn{
   width: 15%;
   border: 1px solid black;
-  padding: 3%;
   text-align: center;
+  padding: 3%;
   margin: 3%;
 
 }

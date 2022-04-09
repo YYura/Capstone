@@ -7,18 +7,29 @@
       <span v-else >Category</span>
     </h1>
 
-    <SidebarLink class="sidebar-link" icon="" to="/">Home</SidebarLink>
-    <SidebarLink class="sidebar-link" icon="" to="/">Home</SidebarLink>
-    <SidebarLink class="sidebar-link" icon="" to="/">Home</SidebarLink>
-    <SidebarLink class="sidebar-link" icon="" to="/">Home</SidebarLink>
-    <SidebarLink class="sidebar-link" icon="" to="/">Home</SidebarLink>
-    <SidebarLink class="sidebar-link" icon="" to="/">Home</SidebarLink>
-    <SidebarLink class="sidebar-link" icon="" to="/">Home</SidebarLink>
-    <SidebarLink class="sidebar-link" icon="" to="/">Home</SidebarLink>
-    <SidebarLink class="sidebar-link" icon="" to="/">Home</SidebarLink>
-    <SidebarLink class="sidebar-link" icon="" to="/">Home</SidebarLink>
-    <SidebarLink class="sidebar-link" icon="" to="/">Home</SidebarLink>
-    <SidebarLink class="sidebar-link" icon="" to="/">Home</SidebarLink>
+    <h5><span v-if="collapsed">
+      </span>
+      <span v-else >캠핑용품</span></h5>
+    <SidebarLink class="sidebar-link" icon="" to="/">캠핑패키지</SidebarLink>
+    <SidebarLink class="sidebar-link" icon="" to="/">텐트</SidebarLink>
+    <SidebarLink class="sidebar-link" icon="" to="/">타프</SidebarLink>
+    <SidebarLink class="sidebar-link" icon="" to="/">테이블</SidebarLink>
+    <SidebarLink class="sidebar-link" icon="" to="/">체어</SidebarLink>
+    <SidebarLink class="sidebar-link" icon="" to="/">침낭</SidebarLink>
+    <SidebarLink class="sidebar-link" icon="" to="/">매트</SidebarLink>
+    <SidebarLink class="sidebar-link" icon="" to="/">식기</SidebarLink>
+    <SidebarLink class="sidebar-link" icon="" to="/">버너</SidebarLink>
+    <SidebarLink class="sidebar-link" icon="" to="/">화로</SidebarLink>
+    <SidebarLink class="sidebar-link" icon="" to="/">캠핑소품</SidebarLink>
+    <SidebarLink class="sidebar-link" icon="" to="/">등산용품</SidebarLink>
+
+    <h5><span v-if="collapsed">
+      </span>
+      <span v-else >식품</span></h5>
+    <SidebarLink class="sidebar-link" icon="" to="/">식품패키지</SidebarLink>
+    <SidebarLink class="sidebar-link" icon="" to="/">육류</SidebarLink>
+    <SidebarLink class="sidebar-link" icon="" to="/">과일</SidebarLink>
+    <SidebarLink class="sidebar-link" icon="" to="/">음료</SidebarLink>
 
     <span
       class="collapse-icon"
@@ -59,7 +70,6 @@ export default {
 
   float: left;
   z-index: 1;
-  /*margin: 0%;*/
   height: 100%;
   left: 0;
   bottom: 0;
@@ -72,13 +82,19 @@ export default {
   flex-direction: column;
 }
 
+.sidebar h5{
+  margin-left: 10%;
+  margin-top: 15%;
+  margin-bottom: 3%;
+}
+
 .sidebar-link{
   color: black;
 }
 
 .collapse-icon{
   position: absolute;
-  top: 70% ;
+  top: 80% ;
   padding: 0.75em;
 
   color: black;

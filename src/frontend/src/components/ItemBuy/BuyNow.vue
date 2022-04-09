@@ -78,11 +78,24 @@
       </tr>
     </table>
 
-    <h5>구매조건 확인 및 결제대행 서비스 약관 동의<button>보기</button></h5>
+    <h5>구매조건 확인 및 결제대행 서비스 약관 동의<button @click="checkBuy()">보기</button></h5>
     <h5>개인정보 제3자 제공 동의<button>보기</button></h5>
 
     <h5 class="buy-now-info-check">위 주문 내용을 확인하였으며, 회원 본인은 개인정보 이용 및 제공(해외직구의 경우 국외제공) 및 결제에 동의합니다.</h5>
     <button class="payNow" @click="paymentBtn()">결제하기</button>
+
+<!--    <div class="buy-check-scroll" v-if="buyCheck">-->
+<!--      <div>-->
+<!--        <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.-->
+<!--          This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.-->
+<!--          This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.-->
+<!--          This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.-->
+<!--          This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.-->
+<!--          This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.-->
+<!--          This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.-->
+<!--        </p>-->
+<!--      </div>-->
+<!--    </div>-->
     <button class="cancel-buy-now" @click="cancelBtn()">취소</button>
 
   </div>
@@ -96,7 +109,8 @@ export default {
       zip: '',
       addr1: '',
       addr2: '',
-      price: 1000
+      price: 1000,
+      buyCheck: false
     }
   },
   mounted () {
@@ -109,7 +123,6 @@ export default {
         oncomplete: (data) => {
           let fullRoadAddr = data.roadAddress
           let extraRoadAddr = ''
-
           if (data.bname !== '' && /[동|로|가]$/g.test(data.bname)) {
             extraRoadAddr += data.bname
           }
@@ -164,6 +177,13 @@ export default {
     },
     cancelBtn () {
       window.location.href = 'http://localhost:8080/itemBuy'
+    },
+    checkBuy () {
+      if (this.buyCheck === true) {
+        this.buyCheck = false
+      } else {
+        this.buyCheck = true
+      }
     }
   }
 }
